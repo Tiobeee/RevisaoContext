@@ -1,15 +1,11 @@
-import { Button, DefaultTheme, Surface, Switch, Text } from "react-native-paper";
-import styles from "../config/styles";
-import TemaContext from "../context/TemaContexto";
-import { useContext } from "react";
+import { StyleSheet } from "react-native";
 
-export default function TrocaTema() {
-  const { tema, alterarTema } = useContext(TemaContext);
-  const isDefaultTheme = tema === DefaultTheme;
-  return (
-    <Surface style={styles.container}>
-      <Text>Toggle theme</Text>
-      <Switch value={tema} onValueChange={alterarTema}></Switch>
-    </Surface>
-  );
-}
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center'
+    }
+})
+
+export default styles;
